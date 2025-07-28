@@ -52,8 +52,9 @@ const Unmute = () => {
   useEffect(() => {
     if (!backendServerUrl) return;
 
-    setWebSocketUrl(backendServerUrl.toString() + "/v1/realtime");
-
+    setWebSocketUrl(
+      backendServerUrl.toString().replace(/^http/, "ws") + "/v1/realtime"
+    );
     const checkHealth = async () => {
       try {
         const controller = new AbortController();

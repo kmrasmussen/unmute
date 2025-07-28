@@ -7,7 +7,7 @@ from typing import Any, AsyncIterator, Protocol, cast
 from mistralai import Mistral
 from openai import AsyncOpenAI, OpenAI
 
-from unmute.kyutai_constants import LLM_SERVER
+from  unmute.kyutai_constants import LLM_SERVER
 
 from ..kyutai_constants import KYUTAI_LLM_MODEL
 

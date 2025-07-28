@@ -80,10 +80,15 @@ ClientEventAdapter = TypeAdapter(
 )
 
 # Allow CORS for local development
-CORS_ALLOW_ORIGINS = ["http://localhost", "http://localhost:3000"]
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+    "http://193.183.22.55:1662",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=CORS_ALLOW_ORIGINS,
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
